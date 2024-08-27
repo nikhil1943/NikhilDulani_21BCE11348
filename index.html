@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Hitwicket Task</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+    <div id="Game_Title">
+        <h2>Advanced Chess Like Game</h2>
+    </div>
+    <div id="currentPlayer">Current Player: <span id="currentPlayerName">Blue</span></div>
+    <div id="board"></div>
+    <div id="pieces">
+        <button id="bluePawn" onclick="selectPiece('BP')">Blue Pawn</button>
+        <button id="blueHero1" onclick="selectPiece('BH1')">Blue Hero 1</button>
+        <button id="blueHero2" onclick="selectPiece('BH2')">Blue Hero 2</button>
+        <button id="redPawn" onclick="selectPiece('RP')">Red Pawn</button>
+        <button id="redHero1" onclick="selectPiece('RH1')">Red Hero 1</button>
+        <button id="redHero2" onclick="selectPiece('RH2')">Red Hero 2</button>
+    </div>
+    <button id="readyButton" onclick="ready()">Ready</button>
+    <button id="resetButton" onclick="resetBoard()">Reset</button>
+    <div id="moveMenu" style="display: flex;">
+        <button onclick="move('B')">Backward</button>
+        <button onclick="move('F')">Forward</button>
+        <button onclick="move('L')">Left</button>
+        <button onclick="move('R')">Right</button>
+        <button onclick="move('FL')">Forward Left</button>
+        <button onclick="move('FR')">Forward Right</button>
+        <button onclick="move('BL')">Backward Left</button>
+        <button onclick="move('BR')">Backward Right</button>
+    </div>
+    <div id="log"></div>
+    <div id="chat">
+        <input type="text" id="chatInput" placeholder="Type a message">
+        <button onclick="sendChat()">Send</button>
+        <div id="chatBox"></div>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+
+</html>
